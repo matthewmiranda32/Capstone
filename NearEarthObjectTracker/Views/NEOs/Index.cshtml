@@ -1,0 +1,51 @@
+﻿@model IEnumerable<NearEarthObjectTracker.Models.NearEarthObjects>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Asteroid_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estimated_Diameter_Max_Kms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isAsteroidDangerous)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.closest_Approach_Earth_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.miss_Distance)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asteroid_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estimated_Diameter_Max_Kms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isAsteroidDangerous)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.closest_Approach_Earth_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.miss_Distance)
+        </td> 
+    </tr>
+    }
+
+</table>

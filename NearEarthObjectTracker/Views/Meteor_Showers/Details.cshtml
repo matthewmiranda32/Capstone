@@ -1,0 +1,92 @@
+﻿@model NearEarthObjectTracker.Models.Meteor_Showers
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Meteor_Showers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.showerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.showerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateOfVisibility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateOfVisibility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.moonPhase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.moonPhase)
+        </dd>
+
+    </dl>
+</div>
+
+    @if(Model.showerName == "Leonids")
+    {
+        <div class="col-lg-offset-0">
+            <img src="../../leonids.png" class="center-block" height="250" width="375"/>
+            </div>
+            <p>The Leonid meteor shower can be seen in the eastern part of the night sky in the constellation of Leo. Best viewing is after midnight on November 18. Because the moon phase is new on this day, visibility shouldn't be a problem.</p>
+    }
+    @if (Model.showerName == "Geminids")
+    {
+    <div class="col-lg-offset-0">
+        <img src="../../geminids.jpg" class="center-block" height="250" width="375" />
+    </div>
+    <p>The Geminid meteor shower peaks between sunset and sunrise on December 14. This is quite an active meteor shower with the possibility of around 120 objects being seen per hour at peak observation time. Viewing towards the south will get you the best view of the Geminids.</p>
+    }
+    @if (Model.showerName == "Ursids")
+    {
+    <div class="col-lg-offset-0">
+        <img src="../../ursids.png" class="center-block" height="250" width="375" />
+    </div>
+    <p>This meteor shower is only visible from Earth's northern hemisphere during the winter months. It peaks around the winter solstice on December 22nd. It is named after Ursa Major as the meteors appear to originate from a point within that constellation.</p>
+    }
+    @if (Model.showerName == "Quadrantids")
+    {
+    <div class="col-lg-offset-0">
+        <img src="../../quadrantids.png" class="center-block" height="250" width="375" />
+    </div>
+    <p>A nearly full moon may hinder visibility of this meteor shower in early January 2018. The peak period for the Quadrantids only lasts a few hours as opposed to the multiple days for other showers. It appears in the Northern Hemisphere just south of the Big Dipper in the constellation Ursa Major.</p>
+    }
+    @if (Model.showerName == "Lyrids")
+    {
+    <div class="col-lg-offset-0">
+        <img src="../../lyrids.jpg" class="center-block" height="250" width="375" />
+    </div>
+    <p>Located within the constellation of Lyra, this meteor shower is considered the oldest known. Those residing in Earth's Northern Hemisphere are best situated to view it, but those in the mid-South can get a good glimpse of it too. Looking towards the east will be your best bet for seeing this shower.</p>
+    }
+    @if (Model.showerName == "Eta Aquarids")
+    {
+    <div class="col-lg-offset-0">
+        <img src="../../eta-acquirids.jpg" class="center-block" height="250" width="375" />
+    </div>
+    <p>This is one of two meteor showers made from debris created by Halley's Comet. This one peaks in May while the other, the Orionid meteor shower peaks in October. The best time to see this shower is just before dawn on May 6th.</p>
+    }
+    @if (Model.showerName == "Perseids")
+    {
+    <div class="col-lg-offset-0">
+        <img src="../../perseid-map.jpg" class="center-block" height="250" width="375" />
+    </div>
+    <p>Those residing in the Northern Hemisphere are best equipped to view this meteor shower. Look in the Northeastern part of the sky towards the constellation Perseus and you can see anywhere from 60 to 100 meteors streak by per hour.</p>
+    }
+    <p>
+        @Html.ActionLink("Back to List", "Index")
+    </p>
